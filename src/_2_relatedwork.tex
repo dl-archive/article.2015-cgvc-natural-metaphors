@@ -1,0 +1,48 @@
+
+\section{Related Work}
+\label{sec:related}
+\noindent 
+Related work comprises the fields of 2.5D software maps and metaphor-based visualization of software system evolution.
+
+\paragraph*{Interactive Software Maps}
+
+Treemaps are commonly used to visualize hierarchical datasets. 
+The original space-filling algorithm introduced by \cite{Shneiderman1992} slices parent nodes recursively by their child nodes properties, alternating in horizontal and vertical direction. 
+Due to undesirable aspect ratios produced by this slice and dice algorithm, Bruel \etal as well as Bederson and Shneiderman proposed squarified treemaps \cite{Bruls1999} and strip treemaps \cite{Bederson2002}. 
+Furthermore, while preserving the visualization of the hierarchy, Fekete and Plaisant added visual attributes, such as color and size, to treemap items \cite{Fekete2002}. 
+The first 2.5D treemap was described in the \emph{Step Tree} approach presented by Bladh \etal \cite{Bladh2004}. 
+The geometric representation of sub-directories is stacked on top of their parent directories. 
+This extension to the third dimension enables metaphor-based visualizations as shown in \emph{Information Pyramids} \cite{Andrews1997} and \emph{Code City} \cite{Wettel2008}, a city metaphor for 3D treemaps in which the height of treemap's cuboids is used to map an additional software system metric. 
+Similar to actual cities, these code cities are partitioned into several districts, including downtown areas and suburbs.
+Referenced as \emph{software maps}, the city metaphor was adopted and extended by several other publications \cite{Liggesmeyer2009,Bohnet2011}.
+Bohnet and D{\"o}llner describe the usage of software maps as a decision-making tool.
+Recently, a comparative performance evaluation of rendering techniques for 2.5D treemaps was presented \cite{Trapp2013}.
+With it, a deferred shape-generation algorithm outperforming existing approaches is presented.
+The basic idea is to generate and render an attributed point-cloud and to expand the points to cuboids on the GPU.
+
+\paragraph*{Visualization of Software Evolution}
+
+The visualization of software evolution implies an additional time dimension.
+Most techniques visualize the change process by animating the transition phase between two software revisions.
+The \emph{VERSO visualization tool} \cite{Langelier2008} uses linear interpolation of color, height, and twist between two revisions. 
+Another approach uses an Evolution Storyboard consisting of an ordered sequence of animated panels showing the structural changes during a time period \cite{Beyer2006}.
+In contrast to animation, the Evolution Matrix approach displays the entire evolution of the software system in a single image \cite{Lanza2001}. 
+Rectangles are used to map the number of methods to width and the number of attributes to height. 
+Each revision is visualized next to its consecutive revision in a separate column.
+
+\paragraph*{Metaphors in Software Visualization}
+
+Besides the city metaphor, other metaphors for software system visualization were proposed. 
+Balzer \etal presented a software landscape metaphor \cite{Balzer2004} using landscape-like distributions of three dimensional objects on a 2D reference plane. 
+Depending relationships between subsystems are visualized using a hierarchical network. 
+Further, Graham \etal proposed a solar-system metaphor \cite{Graham2004} for object-oriented software metrics.
+Planets represent classes, orbits depict the inheritance level within a package: planets in each orbit represent an inheritance hierarchy, while the lines-of-code of a class are mapped to the planet size. 
+A thoroughly written survey of visualization techniques for static and evolutionary information of software systems is presented by Caserta and Zendra \cite{Caserta2011}.
+Holten \etal presented a 2D treemap visualization of software metrics using the surface structure of treemap elements by applying texture- and bump mapping to them \cite{Holten2005}. 
+Their approach is based on the fact that the human visual system can rapidly process visual cues such as shading and textures \cite{Enns1990,Healey1998,Healey1999}.
+Panas \etal use a realistic city metaphor to map code quality metrics to building textures \cite{Caserta2011}. 
+Furthermore, they proposed visual effects such as fire and bolts to communicate hot spot information in code execution and frequent component modifications \cite{Panas2003}.
+However, neither an implementation nor an evaluation of such visual mappings are provided.
+An empirical study by Borgo \etal suggests that visual embellishments aid memorization performance in both accuracy and response time, though it might have a negative impact on speed of visual search \cite{Borgo2012}.
+It further proves that visual embellishments aid concept grasping.
+
