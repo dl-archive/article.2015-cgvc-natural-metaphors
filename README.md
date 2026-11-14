@@ -38,6 +38,17 @@ The final export of the pipeline figure (`src/figures/pipeline.pdf`, Adobe Illus
 ## Versions
 
 - [`v1.0-camera-ready`](https://github.com/dl-archive/article.2015-cgvc-natural-metaphors/tree/v1.0-camera-ready) – sources as submitted to Eurographics (2015)
+- [`v1.1-revised`](https://github.com/dl-archive/article.2015-cgvc-natural-metaphors/tree/v1.1-revised) – author's revised version (2026-11-14): spelling, grammar and hyphenation fixes, see [Revisions](#revisions)
+
+## Revisions
+
+`v1.1-revised` (2026-11-14) corrects errors in the camera-ready version without changing its content or layout (same page and column breaks).
+Every page carries the note "Author's revised version (2026-11-14). Version of record: https://doi.org/10.2312/cgvc.20151246".
+
+- Spelling: "required to spend", "displacement mapping", "Unreal renderer", "Catmull-Rom splines".
+- Grammar and word choice: "In recent years, software maps", "map-oriented techniques constitutes", "large software systems", "closely match virtual 3D environments", "child nodes' properties", "the height of the treemap's cuboids", "structured as a pipeline", "outlast the end revision *m* consist of", "one for a negative", "context-based metaphors can be made", "a high degree of corrosion", "the structure of the trend map", "lets us rapidly prototype", "the engine's source code", "close to or equal to zero", "application scenarios", "the trend of the McCabe metric is mapped", "With respect to performance", "limitation of our approach is that", "regions tends to", "software metric values", "may also be applicable to other fields", "caution in applying metaphors … remains advisable", and a stray comma after "e.g.,".
+- Hyphenation and typography: decision-making, real-world, metrics-based, three-dimensional, texture-based, geometry-based; durations in the performance table with thin spaces ("approx. 4 h", "4 s", "16 ms", was "appr. 04h", "04sec", "16ms").
+- References: "Bruls et al." (was "Bruel et al.", authors of [BHvW00]).
 
 ## Citation
 

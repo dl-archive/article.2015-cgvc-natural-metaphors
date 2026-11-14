@@ -6,12 +6,12 @@ In contrast to previous work in the field of software visualization, our approac
 
 \subsection{Rendering Engine Integration}
 \noindent
-We have chosen to evaluate the Unreal Engine 4 (\emph{UE4}) for our prototypical implementation since it offers us to rapidly prototype materials and particle systems for our purposes. 
+We have chosen to evaluate the Unreal Engine 4 (\emph{UE4}) for our prototypical implementation since it lets us rapidly prototype materials and particle systems for our purposes. 
 At the date of writing, Unreal Engine 4.8 is the latest iteration of the game engine created by Epic Games Inc. 
-It offers libraries and tools as well as the engines source code to develop graphics applications.
+It offers libraries and tools as well as the engine's source code to develop graphics applications.
 Game development in C++ with UE4 works by implementing a shared library (game module) which is loaded by the engine at runtime. 
 To change or extend the engine functionality there are two options: source code modifications and plugins. 
-We have integrated our own software visualization library using plugins and instead of our own renderer, we use the unreal renderer. 
+We have integrated our own software visualization library using plugins and instead of our own renderer, we use the Unreal renderer. 
 The game module uses the plugin to visualize the trend map and implements a basic navigation and graphical user interface to interact with it.
 
 \subsection{Surface Materials for Item-based Metaphors}
@@ -43,7 +43,7 @@ UE4 implements a physically-based shading model with a small set of intuitive pa
 \begin{wrapfigure}{l}{0.5in}
 	\includegraphics[width=0.5in]{material-shininess}
 \end{wrapfigure}
-\textbf{Shininess} is created using the metallic parameter, with a high specular value and roughness close or equal to zero. 
+\textbf{Shininess} is created using the metallic parameter, with a high specular value and roughness close to or equal to zero. 
 
 \setlength{\columnsep}{\marginparsep}
 \setlength{\intextsep}{\marginparsep}
@@ -76,7 +76,7 @@ However, a linear regression model for time series is rarely the best choice, si
 (1) its deviation from the data is often larger at the end of the time series or 
 (2) the underlying data is simply not linear. 
 Our system is designed to be extensible to different trend computation models, since other prediction models might be better suited.
-For an overview of statistical forecasting methods and respective applications scenarios we refer to Robert F. Nau \cite{Nau2015}.
+For an overview of statistical forecasting methods and respective application scenarios we refer to Robert F. Nau \cite{Nau2015}.
 
 A material is also an implementation of an element-based effect. 
 Context-based metaphors using surface properties are implemented top-down by propagating aggregated metric values down the hierarchy. 

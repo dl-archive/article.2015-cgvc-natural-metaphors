@@ -26,7 +26,7 @@ Therefore, this paper focuses on hardware-accelerated rasterization for real-tim
 
 \subsection{Conceptual Overview}
 \noindent
-Our approach is structured as pipeline comprising data mining, metrics aggregation, and trend map rendering (\autoref{fig:pipeline}).
+Our approach is structured as a pipeline comprising data mining, metrics aggregation, and trend map rendering (\autoref{fig:pipeline}).
 
 \paragraph*{Data Mining}
 \noindent
@@ -40,7 +40,7 @@ This step is performed once for a given repository and allows for successive upd
 In this stage, a revision range $R = [n,\;m]$ with $n,m \in \mathbb{N}, n < m$ is specified by the user and used to compute the trend data later.
 The user also selects the metrics of which he wants to observe trends.
 The trend data of every treemap item is defined as a time series of metric data points over the revision range: 
-For example, items that already existed at the start revision $n$ and outlast the end revision $m$, consist of a time series with $m-n+1$ data points.
+For example, items that already existed at the start revision $n$ and outlast the end revision $m$ consist of a time series with $m-n+1$ data points.
 Trend data is then aggregated with respect to particular parent items of the hierarchy. 
 Subsequently, a treemap layout is computed and encoded as \emph{attributed point-cloud} for efficient rendering in the next stage. 
 Simultaneously, the \emph{trend data} is computed by analyzing the time series for all treemap items.
@@ -50,7 +50,7 @@ Simultaneously, the \emph{trend data} is computed by analyzing the time series f
 The rectangular treemap geometry is created based on the attributed point cloud. 
 Trends are mapped to the parametrization of natural phenomena (\autoref{sec:design_and_parametrization}).
 Depending on the degree of change, five discrete levels are depicted in one trend map to facilitate visual distinction: strong increase, moderate increase, stagnation, moderate decrease, and strong decrease.
-Up to two distinct effects can be specified by the user, one for negative and one for a positive trend. 
+Up to two distinct effects can be specified by the user, one for a negative and one for a positive trend. 
 The effects are parametrized according to the computed trend and combined with the static system structure encoded in the attributed point-cloud.
 The latter is used for final image synthesis (\autoref{sec:implementation}).
 
@@ -58,7 +58,7 @@ The latter is used for final image synthesis (\autoref{sec:implementation}).
 \label{sec:design_and_parametrization}
 \noindent
 Before focusing on suitable metaphors and their automatic parametrization, this section describes the design space of natural phenomena and how these can be mapped to software maps for effective visual communication. 
-Considering 2.5D treemaps as reference geometry \cite{Duebel2014}, a differentiation between \emph{item-based} and \emph{context-based} metaphors, can be made \wrt the \emph{design elements}:
+Considering 2.5D treemaps as reference geometry \cite{Duebel2014}, a differentiation between \emph{item-based} and \emph{context-based} metaphors can be made \wrt the \emph{design elements}:
 \begin{description}
 	
 	\item[Item-based metaphors] Modifying the visualization of a single treemap item by changing its surface appearance using additional or altered materials,
@@ -72,11 +72,11 @@ Considering 2.5D treemaps as reference geometry \cite{Duebel2014}, a differentia
 The surface properties of a treemap cuboid define a material that determines how light interacts with them and hence how it is perceived.
 To find suitable metaphors to communicate the change of an object state over time we pair contrary phenomena (\autoref{fig:item-based-metaphors}). 
 We identified the roughness of a surface to be a suitable metaphor to visualize \enquote{how neat} a component implementation is:
-A negative trend is depicted by a high surface roughness, optionally amplified by texture based (displacment mapping) as well as geometry based (tessellation) displacement (\emph{rough}). 
+A negative trend is depicted by a high surface roughness, optionally amplified by texture-based (displacement mapping) as well as geometry-based (tessellation) displacement (\emph{rough}). 
 In contrast thereto, a positive trend is depicted using a low surface roughness in combination with a
 high specular reflection property, resulting in a shiny and clean cuboid (\emph{shiny}).
 Concerning the evolution of test coverage of individual items, corrosion is a suitable metaphor.
-Thereby, high degree of corrosion relates to decreasing test coverage (\emph{rusty}).
+Thereby, a high degree of corrosion relates to decreasing test coverage (\emph{rusty}).
 Due to the fact that no corrosion would result in the neutral state (which results from the applied color mapping), a high radiant emittance (glow) is used to effectively communicate a positive trend in test coverage (\emph{glowing}). 
 \begin{figure}[b]
 	\centering
@@ -108,7 +108,7 @@ Every effect defines parameter sub-ranges that discretize the mapped parameter v
 
 \subsection{Hierarchical Aggregation of Software Metrics}
 \noindent
-Similar to software maps, the hierarchical structure of trend map mirrors the directory tree of the current revision chosen from a code repository. 
+Similar to software maps, the hierarchical structure of the trend map mirrors the directory tree of the current revision chosen from a code repository. 
 To determine software metric trends for individual (\ie files) as well as groups of items (\eg packages), trend data is aggregated bottom-up within the hierarchy in a specified revision range.
 Post-order and reversed level-order traversals are suitable for this task. 
 Therefore, a node in a revision range tree holds a bucket $k$ for each revision within the revision range. 

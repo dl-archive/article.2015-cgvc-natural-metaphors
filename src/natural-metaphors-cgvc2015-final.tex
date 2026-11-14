@@ -15,4 +15,8 @@
 \usepackage{egweblnk}
 \usepackage{cite}
 
+\usepackage{xcolor}
+\usepackage{eso-pic}
+\setlength{\paperwidth}{210mm}\setlength{\paperheight}{297mm}% egpubl leaves them 0; needed by eso-pic
+\AddToShipoutPictureFG{\AtPageLowerLeft{\put(\LenToUnit{0.5\paperwidth},\LenToUnit{6mm}){\makebox[0pt][c]{\fontsize{6.5}{8}\selectfont\color{gray}Author's revised version (2026-11-14). Version of record: https://doi.org/10.2312/cgvc.20151246}}}}
 \input{natural-metaphors-cgvc2015-body.tex}
