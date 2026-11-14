@@ -4,7 +4,7 @@ Hannes Würfel, [Matthias Trapp](https://orcid.org/0000-0003-3861-5759), [Daniel
 
 *Computer Graphics and Visual Computing (CGVC '15)*, September 16–17, 2015, London, United Kingdom. Eurographics Association, pp. 69–76.
 
-[![Version of record: 10.2312/cgvc.20151246](https://img.shields.io/badge/Version_of_record-10.2312%2Fcgvc.20151246-007ec6)](https://doi.org/10.2312/cgvc.20151246)
+[![Version of record: 10.2312/cgvc.20151246](https://img.shields.io/badge/Version_of_record-10.2312%2Fcgvc.20151246-007ec6)](https://doi.org/10.2312/cgvc.20151246) [![Author's version: 10.5281/zenodo.24221663](https://img.shields.io/badge/Author%27s_version-10.5281%2Fzenodo.24221663-007ec6)](https://doi.org/10.5281/zenodo.24221663)
 
 > Software maps are a commonly used tool for code quality monitoring in software-development projects and decision making processes.
 > While providing an important visualization technique for the hierarchical system structure of a single software revision, they lack capabilities with respect to the visualization of changes over multiple revisions.
